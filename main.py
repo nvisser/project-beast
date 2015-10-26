@@ -1,0 +1,2 @@
+# Hoofdbestand
+from tkinter import *
