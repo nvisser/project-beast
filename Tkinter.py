@@ -2,9 +2,11 @@ __author__ = 'Brumes'
 
 from tkinter import *
 
+global window
+window = Tk()
+
 
 def laatschermzien(api):
-    window = Tk()
     label = Label(window, text='Van welk station wilt u de vertrektijden weten?')
     label.pack()
     data = api.verkrijg_utrecht()
@@ -13,5 +15,7 @@ def laatschermzien(api):
 
     window.mainloop()
 
+
 def zettekstneer(data):
-    print(data)
+    label = Label(window, text=data)
+    label.pack()
