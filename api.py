@@ -10,6 +10,14 @@ headers = {
     'Authorization': 'Basic bmllay52aXNzZXJAc3R1ZGVudC5odS5ubDpuYWdxRVFsRUlfeGJuT3RiaWx3b0F5VF9sQ1NOZDVPMFhuQnl3YzRHdjJ4MFlfTzlRSHVIOGc='}
 
 
+def verkrijg_utrecht():
+    """
+    Verkrijg de vertrektijden van Utrecht
+    :return:
+    """
+    return zoek('Utrecht')
+
+
 def zoek(waar):
     """
     Zoek naar actuele vertrektijden
