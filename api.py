@@ -1,10 +1,9 @@
 # API Functies
+__author__ = 'Niek Visser'
 import xmltodict
 import requests
 
 api_url = 'http://webservices.ns.nl/ns-api-avt?station=%s'
-api_user = 'niek.visser@student.hu.nl'
-api_pass = 'nagqEQlEI_xbnOtbilwoAyT_lCSNd5O0XnBywc4Gv2x0Y_O9QHuH8g'
 
 headers = {
     'Authorization': 'Basic bmllay52aXNzZXJAc3R1ZGVudC5odS5ubDpuYWdxRVFsRUlfeGJuT3RiaWx3b0F5VF9sQ1NOZDVPMFhuQnl3YzRHdjJ4MFlfTzlRSHVIOGc='}
