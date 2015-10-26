@@ -1,14 +1,16 @@
+__author__ = 'Ramin Toghyan'
+
 from tkinter import *
 from tkinter.messagebox import showinfo
 
 global window, infotekst
 window = Tk()
 window.configure(background='#FFE917')
-window.geometry('{}x{}'.format(1920, 1080))
+
 
 def laatschermzien(api):
-    toptext=Label(window, text='Van welk station wilt u actuele vertrektijden zien?')
-    toptext.place(x=240, y=150)
+    toptext=Label(window, text='Welkom bij de NS \n Selecteer een optie')
+    toptext.place(x=450, y=150)
     toptext.config(background='#FFE917', foreground='#006', font='Arial 32 bold')
     utrecht = api.zoek('Utrecht Centraal')
     groningen = api.zoek('Groningen')
@@ -21,36 +23,27 @@ def laatschermzien(api):
     Arnhem = api.zoek('Arnhem')
     Houten = api.zoek('Houten')
 
-    button1 = Button(window, text='Utrecht CS', command=lambda: zettekstneer(utrecht))
-    button1.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button1.place(x=250, y=270)
+    button1 = Button(window, text='Utrecht Centraal', command=lambda: zettekstneer(utrecht))
+
+    button1.grid(row=0, column=0, sticky=E, padx=5, pady=5)
     button2 = Button(window, text='Groningen', command=lambda: zettekstneer(groningen))
-    button2.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button2.place(x=250, y=320)
-    button3 = Button(window, text='Amsterdam CS', command=lambda: zettekstneer(Amsterdam))
-    button3.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button3.place(x=250, y=370)
-    button4 = Button(window, text='Rotterdam CS', command=lambda: zettekstneer(Rotterdam))
-    button4.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button4.place(x=250, y=420)
-    button5 = Button(window, text='Leiden CS', command=lambda: zettekstneer(Leiden))
-    button5.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button5.place(x=250, y=470)
+    button2.grid(row=0, column=1, sticky=E, padx=5, pady=5)
+    button3 = Button(window, text='Amsterdam Centraal', command=lambda: zettekstneer(Amsterdam))
+    button3.grid(row=0, column=2, sticky=E, padx=5, pady=5)
+    button4 = Button(window, text='Rotterdam Centraal', command=lambda: zettekstneer(Rotterdam))
+    button4.grid(row=0, column=3, sticky=E, padx=5, pady=5)
+    button5 = Button(window, text='Leiden Centraal', command=lambda: zettekstneer(Leiden))
+    button5.grid(row=0, column=4, sticky=E, padx=5, pady=5)
     button6 = Button(window, text='Schiphol', command=lambda: zettekstneer(Schiphol))
-    button6.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button6.place(x=1030, y=270)
+    button6.grid(row=1, column=0, sticky=E, padx=5, pady=5)
     button7 = Button(window, text='Eindhoven', command=lambda: zettekstneer(Eindhoven))
-    button7.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button7.place(x=1030, y=320)
+    button7.grid(row=1, column=1, sticky=E, padx=5, pady=5)
     button8 = Button(window, text='Amersfoort', command=lambda: zettekstneer(Amersfoort))
-    button8.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button8.place(x=1030, y=370)
+    button8.grid(row=1, column=2, sticky=E, padx=5, pady=5)
     button9 = Button(window, text='Arnhem', command=lambda: zettekstneer(Arnhem))
-    button9.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button9.place(x=1030, y=420)
+    button9.grid(row=1, column=3, sticky=E, padx=5, pady=5)
     button10 = Button(window, text='Houten', command=lambda: zettekstneer(Houten))
-    button10.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
-    button10.place(x=1030, y=470)
+    button10.grid(row=1, column=4, sticky=E, padx=5, pady=5)
 
     window.mainloop()
 
