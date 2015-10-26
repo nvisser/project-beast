@@ -30,10 +30,12 @@ def zoek(waar):
     if 'error' in ez_access:
         print(ez_access['error']['message'])
         exit(1)
+    tekst = ''
     for train in ez_access['ActueleVertrekTijden']['VertrekkendeTrein']:
-        print("Trein {} van {} naar {} vertrekt om {}".format(
+        tekst = tekst + "Trein {} van {} naar {} vertrekt om {}\n".format(
             train['RitNummer'],
             waar,
             train['EindBestemming'],
             train['VertrekTijd']
-        ))
+        )
+    return tekst
