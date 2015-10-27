@@ -7,8 +7,6 @@ import api
 
 
 def popup():
-    #Tkinter.laatschermzien(api)
-    # TODO: waarom is dit gelijk hier?????
     showinfo(title='Popup', message='This button is useless')
 
 def submenu():
