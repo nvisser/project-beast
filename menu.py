@@ -31,5 +31,6 @@ mmbutton = Button (window, text = "Actuale \n vertrektijden", command=lambda: po
 mmbutton.place( x=970, y = 350)
 mmbutton.config(width=20, height=10, background='#003082', foreground='white', font='Arial 14 bold')
 command = popup
+window.geometry('{}x{}'.format(1280, 720))
 
 window.mainloop()
