@@ -7,9 +7,12 @@ import api
 
 
 def popup():
-    Tkinter.laatschermzien(api)
+    #Tkinter.laatschermzien(api)
     # TODO: waarom is dit gelijk hier?????
-    # showinfo(title='Popup', message='This button is useless')
+    showinfo(title='Popup', message='This button is useless')
+
+def submenu():
+    Tkinter.laatschermzien(api)
 
 
 window = Tk()
@@ -29,16 +32,16 @@ mmbutton.config(width=20, height=10, background='#003082', foreground='white', f
 mmbutton = Button(window, text="Kopen \n OV-chipkaart", command=lambda: popup())
 mmbutton.place(x=370, y=350)
 mmbutton.config(width=20, height=10, background='#003082', foreground='white', font='Arial 14 bold')
-command = popup
+
 
 mmbutton = Button(window, text="Ik wil naar \n het buitenland", command=lambda: popup())
 mmbutton.place(x=670, y=350)
 mmbutton.config(width=20, height=10, background='#003082', foreground='white', font='Arial 14 bold')
-command = popup
 
-mmbutton = Button(window, text="Actuale \n vertrektijden", command=lambda: popup())
+
+mmbutton = Button(window, text="Actuale \n vertrektijden", command=lambda: submenu())
 mmbutton.place(x=970, y=350)
 mmbutton.config(width=20, height=10, background='#003082', foreground='white', font='Arial 14 bold')
-command = popup
+
 
 window.mainloop()
