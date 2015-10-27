@@ -5,6 +5,7 @@ from tkinter.messagebox import showinfo
 
 global window, infotekst
 window = Tk()
+window.wm_title("Team Beast NS Applicatie")
 
 
 def laatschermzien(api):
