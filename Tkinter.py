@@ -11,7 +11,7 @@ window.configure(background='yellow')
 
 def laatschermzien(api):
     label = Label(window, text='Van welk station wilt u de vertrektijden weten?')
-    label.grid(row=0,column=2,padx=5,pady=5)
+    label.grid(row=0, column=2, padx=5, pady=5)
     utrecht = api.zoek('Utrecht Centraal')
     groningen = api.zoek('Groningen')
     Amsterdam = api.zoek('Amsterdam Centraal')
