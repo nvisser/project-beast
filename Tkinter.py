@@ -4,7 +4,7 @@ from tkinter.messagebox import showinfo
 global window, infotekst
 window = Tk()
 window.configure(background='#FFE917')
-window.geometry('{}x{}'.format(1280, 720))
+window.geometry('{}x{}'.format(1920, 1080))
 
 def laatschermzien(api):
     toptext=Label(window, text='Van welk station wilt u actuele vertrektijden zien?')
