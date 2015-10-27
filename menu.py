@@ -6,6 +6,7 @@ def popup():
     showinfo(title='Popup', message='This button is useless')
 
 window = Tk()
+window.wm_title("Team Beast NS Applicatie")
 window.configure(background='#FFE917')
 
 toptext=Label(window, text='Welkom bij de NS \n Selecteer een optie')
