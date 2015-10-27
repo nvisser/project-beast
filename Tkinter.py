@@ -24,27 +24,7 @@ def laatschermzien(api):
     Houten = api.zoek('Houten')
 
     button1 = Button(window, text='Utrecht Centraal', command=lambda: zettekstneer(utrecht))
-<<<<<<< HEAD
-    button1.grid(row=1,column=0,sticky = E,padx=5,pady=5)
-    button2 = Button(window, text='Groningen', command=lambda: zettekstneer(groningen))
-    button2.grid(row=1,column=1,sticky = E,padx=5,pady=5)
-    button3 = Button(window, text='Amsterdam Centraal', command=lambda: zettekstneer(Amsterdam))
-    button3.grid(row=1,column=2,sticky = E,padx=5,pady=5)
-    button4 = Button(window, text='Rotterdam Centraal', command=lambda: zettekstneer(Rotterdam))
-    button4.grid(row=1,column=3,sticky = E,padx=5,pady=5)
-    button5 = Button(window, text='Leiden Centraal', command=lambda: zettekstneer(Leiden))
-    button5.grid(row=1,column=4,sticky = E,padx=5,pady=5)
-    button6 = Button(window, text='Schiphol', command=lambda: zettekstneer(Schiphol))
-    button6.grid(row=2,column=0,sticky = E,padx=5,pady=5)
-    button7 = Button(window, text='Eindhoven', command=lambda: zettekstneer(Eindhoven))
-    button7.grid(row=2,column=1,sticky = E,padx=5,pady=5)
-    button8 = Button(window, text='Amersfoort', command=lambda: zettekstneer(Amersfoort))
-    button8.grid(row=2,column=2,sticky = E,padx=5,pady=5)
-    button9 = Button(window, text='Arnhem', command=lambda: zettekstneer(Arnhem))
-    button9.grid(row=2,column=3,sticky = E,padx=5,pady=5)
-    button10 = Button(window, text='Houten', command=lambda: zettekstneer(Houten))
-    button10.grid(row=2,column=4,sticky = E,padx=5,pady=5)
-=======
+
     button1.grid(row=0, column=0, sticky=E, padx=5, pady=5)
     button2 = Button(window, text='Groningen', command=lambda: zettekstneer(groningen))
     button2.grid(row=0, column=1, sticky=E, padx=5, pady=5)
@@ -64,7 +44,6 @@ def laatschermzien(api):
     button9.grid(row=1, column=3, sticky=E, padx=5, pady=5)
     button10 = Button(window, text='Houten', command=lambda: zettekstneer(Houten))
     button10.grid(row=1, column=4, sticky=E, padx=5, pady=5)
->>>>>>> origin/master
 
     window.mainloop()
 
