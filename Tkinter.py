@@ -5,13 +5,13 @@ from tkinter.messagebox import showinfo
 
 global window, infotekst
 window = Tk()
-window.wm_title("Team Beast NS Applicatie")
-window.configure(background='yellow')
+window.configure(background='#FFE917')
 
 
 def laatschermzien(api):
-    label = Label(window, text='Van welk station wilt u de vertrektijden weten?')
-    label.grid(row=0,column=2,padx=5,pady=5)
+    toptext=Label(window, text='Welkom bij de NS \n Selecteer een optie')
+    toptext.place(x=450, y=150)
+    toptext.config(background='#FFE917', foreground='#006', font='Arial 32 bold')
     utrecht = api.zoek('Utrecht Centraal')
     groningen = api.zoek('Groningen')
     Amsterdam = api.zoek('Amsterdam Centraal')
