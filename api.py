@@ -1,5 +1,4 @@
 # API Functies
-__author__ = 'Niek Visser'
 import xmltodict
 import requests
 

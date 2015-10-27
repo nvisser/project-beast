@@ -1,5 +1,3 @@
-__author__ = 'Brumes'
-
 from tkinter import *
 from tkinter.messagebox import showinfo
 
