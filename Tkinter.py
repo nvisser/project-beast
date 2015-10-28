@@ -7,7 +7,7 @@ window.resizable(0,0)
 window.wm_title("Team Beast NS Applicatie")
 window.configure(background='#FFE917')
 window.geometry('{}x{}'.format(1280, 720))
-window.protocol('WM_DELETE_WINDOW', lambda: None)
+window.protocol('WM_DELETE_WINDOW', lambda: quitwindow())
 
 
 def laatschermzien(api):
@@ -57,8 +57,8 @@ def laatschermzien(api):
     button10.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
     button10.place(x=1030, y=470)
 
-    def quitwindow():
-        window.withdraw()
+def quitwindow():
+    window.withdraw()
 
     quit = Button(window, text='Terug naar hoofdmenu', command = quitwindow)
     quit.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
