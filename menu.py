@@ -21,7 +21,7 @@ def submenu():
 
 
 window = Tk()
-window.resizable(0,0)
+window.resizable(0, 0)
 window.wm_title("Team Beast NS Applicatie")
 window.configure(background='#FFE917')
 window.geometry('{}x{}'.format(1280, 720))
