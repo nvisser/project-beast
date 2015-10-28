@@ -57,14 +57,13 @@ def laatschermzien(api):
     button10.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
     button10.place(x=1030, y=470)
 
-def quitwindow():
-    window.withdraw()
-
     quit = Button(window, text='Terug naar hoofdmenu', command = quitwindow)
     quit.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
     quit.place(x=1030, y=570)
-
     window.mainloop()
+
+def quitwindow():
+    window.withdraw()
 
 
 def zettekstneer(data):
