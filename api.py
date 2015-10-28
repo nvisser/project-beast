@@ -1,5 +1,4 @@
 # API Functies
-# TODO: Error catching
 import xmltodict
 import requests
 from datetime import datetime
