@@ -13,9 +13,10 @@ def submenu():
 
 
 window = Tk()
+window.resizable(0,0)
 window.wm_title("Team Beast NS Applicatie")
 window.configure(background='#FFE917')
-window.geometry('{}x{}'.format(1920, 1080))
+window.geometry('{}x{}'.format(1280, 720))
 
 toptext = Label(window, text='Welkom bij de NS \n Selecteer een optie')
 toptext.place(x=550, y=150)
