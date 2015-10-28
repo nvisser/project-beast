@@ -57,6 +57,11 @@ def laatschermzien(api):
 
 
 def zettekstneer(data):
+
     infotekst = data
     # TODO: label tekst vervangen
-    showinfo(title='Vertrektijden', message=infotekst)
+    #showinfo(title='Vertrektijden', message=infotekst)
+    infolabel = Label(window, text = infotekst)
+    infolabel.configure(text = infotekst)
+    infolabel.config(width=80, height=30, background='yellow', foreground='white', font='Arial 8 bold')
+    infolabel.place(x=460, y=210)
