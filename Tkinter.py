@@ -24,7 +24,7 @@ def laatschermzien(api):
     Eindhoven = api.zoek('Eindhoven')
     Amersfoort = api.zoek('Amersfoort')
     Arnhem = api.zoek('Arnhem')
-    Houten = api.zoek('Houten')
+    Zwolle = api.zoek('Zwolle')
 
     button1 = Button(window, text='Utrecht CS', command=lambda: zettekstneer(utrecht))
     button1.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
@@ -53,7 +53,7 @@ def laatschermzien(api):
     button9 = Button(window, text='Arnhem', command=lambda: zettekstneer(Arnhem))
     button9.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
     button9.place(x=960, y=420)
-    button10 = Button(window, text='Houten', command=lambda: zettekstneer(Houten))
+    button10 = Button(window, text='Zwolle', command=lambda: zettekstneer(Zwolle))
     button10.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
     button10.place(x=960, y=470)
 
@@ -72,5 +72,5 @@ def zettekstneer(data):
     # TODO: label tekst vervangen
     infolabel = Label(window, text = infotekst)
     infolabel.configure(text = infotekst)
-    infolabel.config(width=50, height=15, background='#FFE917', foreground='#003082', font='Arial 12 bold')
+    infolabel.config(width=50, height=16, background='#FFE917', foreground='#003082', font='Arial 12 bold')
     infolabel.place(x=380, y=270)
