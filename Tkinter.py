@@ -6,8 +6,9 @@ window = Tk()
 window.configure(background='#FFE917')
 window.geometry('{}x{}'.format(1920, 1080))
 
+
 def laatschermzien(api):
-    toptext=Label(window, text='Van welk station wilt u actuele vertrektijden zien?')
+    toptext = Label(window, text='Van welk station wilt u actuele vertrektijden zien?')
     toptext.place(x=240, y=150)
     toptext.config(background='#FFE917', foreground='#006', font='Arial 32 bold')
     utrecht = api.zoek('Utrecht Centraal')
