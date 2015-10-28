@@ -10,13 +10,6 @@ headers = {
 }
 
 
-def verkrijg_utrecht():
-    """
-    Verkrijg de vertrektijden van Utrecht
-    :return:
-    """
-    return zoek('Utrecht')
-
 
 def zoek(waar):
     """
