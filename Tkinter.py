@@ -3,6 +3,7 @@ from tkinter.messagebox import showinfo
 
 global window, infotekst
 window = Tk()
+window.wm_title("Team Beast NS Applicatie")
 window.configure(background='#FFE917')
 window.geometry('{}x{}'.format(1920, 1080))
 
@@ -53,6 +54,13 @@ def laatschermzien(api):
     button10.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
     button10.place(x=1030, y=470)
 
+    def quitwindow():
+        window.destroy()
+
+    quit = Button(window, text='Terug naar hoofdmenu', command = quitwindow)
+    quit.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
+    quit.place(x=1030, y=570)
+
     window.mainloop()
 
 
@@ -60,8 +68,7 @@ def zettekstneer(data):
 
     infotekst = data
     # TODO: label tekst vervangen
-    #showinfo(title='Vertrektijden', message=infotekst)
     infolabel = Label(window, text = infotekst)
     infolabel.configure(text = infotekst)
-    infolabel.config(width=80, height=30, background='yellow', foreground='white', font='Arial 8 bold')
-    infolabel.place(x=460, y=210)
+    infolabel.config(width=50, height=15, background='#FFE917', foreground='#003082', font='Arial 12 bold')
+    infolabel.place(x=475, y=270)

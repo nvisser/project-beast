@@ -4,7 +4,7 @@ import api
 
 
 def popup():
-    showinfo(title='Popup', message='This button is useless')
+    showinfo(title='Popup', message='Deze functie is niet deel van deze aplicatie \n Deze knop doet dus niks')
 
 
 def submenu():
