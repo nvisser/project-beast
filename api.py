@@ -42,13 +42,21 @@ def zoek(waar):
     i = 0
     for train in ez_access['ActueleVertrekTijden']['VertrekkendeTrein']:
         dateobject = datetime.strptime(train['VertrekTijd'], '%Y-%m-%dT%H:%M:%S%z')
-        tekst += "%s:%s - %s naar %s van spoor %s\n" % (
-            dateobject.hour,
-            dateobject.minute,
-            train['TreinSoort'],
-            train['EindBestemming'],
-            str(train['VertrekSpoor']['#text'])
-        )
+        try:
+            tekst += "%s:%s - %s naar %s van spoor %s\n" % (
+                dateobject.hour,
+                dateobject.minute,
+                train['TreinSoort'],
+                train['EindBestemming'],
+                str(train['VertrekSpoor']['#text'])
+            )
+        except:
+            tekst += "%s:%s - %s naar %s\n" % (
+                dateobject.hour,
+                dateobject.minute,
+                train['TreinSoort'],
+                train['EindBestemming']
+            )
         i += 1
         if i == limit:
             break
