@@ -11,6 +11,11 @@ window.protocol('WM_DELETE_WINDOW', lambda: quitwindow())
 
 
 def laatschermzien(api):
+    """
+    Laat het scherm zien
+    :param api:
+    :return:
+    """
     window.deiconify()
     toptext = Label(window, text='Van welk station wilt u actuele vertrektijden zien?')
     toptext.place(x=140, y=150)
@@ -63,11 +68,19 @@ def laatschermzien(api):
     window.mainloop()
 
 def quitwindow():
+    """
+    Hide the window
+    :return:
+    """
     window.withdraw()
 
 
 def zettekstneer(data):
-
+    """
+    Zet de tekst neer in het scherm
+    :param data:
+    :return:
+    """
     infotekst = data
     # TODO: label tekst vervangen
     infolabel = Label(window, text = infotekst)

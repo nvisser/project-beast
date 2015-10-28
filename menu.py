@@ -4,10 +4,18 @@ import api
 
 
 def popup():
+    """
+    Placeholder function
+    :return:
+    """
     showinfo(title='Popup', message='Deze functie is niet deel van deze aplicatie \n Deze knop doet dus niks')
 
 
 def submenu():
+    """
+    Init
+    :return:
+    """
     import Tkinter
     Tkinter.laatschermzien(api)
 
