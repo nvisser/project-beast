@@ -1,4 +1,5 @@
 # API Functies
+# TODO: Error catching
 import xmltodict
 import requests
 
@@ -23,13 +24,19 @@ def zoek(waar):
     :param waar:
     :return:
     """
-    data = requests.get(api_url % waar, headers=headers)
+    try:
+        data = requests.get(api_url % waar, headers=headers)
+    except:
+        return 'Geen resultaten'
+
+    if data.status_code != 200:
+        return 'Geen resultaten'
 
     data_text = data.text
+    print(data)
     ez_access = xmltodict.parse(data_text)
     if 'error' in ez_access:
-        print(ez_access['error']['message'])
-        exit(1)
+        return ez_access['error']['message']
     tekst = ''
     for train in ez_access['ActueleVertrekTijden']['VertrekkendeTrein']:
         tekst = tekst + "Trein {} van {} naar {} vertrekt om {}\n".format(
