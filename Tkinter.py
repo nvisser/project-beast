@@ -72,5 +72,5 @@ def zettekstneer(data):
     # TODO: label tekst vervangen
     infolabel = Label(window, text = infotekst)
     infolabel.configure(text = infotekst)
-    infolabel.config(width=50, height=16, background='#FFE917', foreground='#003082', font='Arial 12 bold')
+    infolabel.config(width=50, height=16, background='#FFE917', foreground='#003082', font='Arial 12 bold', justify='left', anchor='nw')
     infolabel.place(x=380, y=270)
