@@ -38,15 +38,17 @@ def zoek(waar):
     if 'error' in ez_access:
         return ez_access['error']['message']
     tekst = ''
-    limit = 10
+    limit = 15
     i = 0
     for train in ez_access['ActueleVertrekTijden']['VertrekkendeTrein']:
         dateobject = datetime.strptime(train['VertrekTijd'], '%Y-%m-%dT%H:%M:%S%z')
         minute = dateobject.minute if dateobject.minute > 9 else '0{}'.format(dateobject.minute)
         spoor = 'van spoor {}'.format(str(train['VertrekSpoor']['#text'])) if '#text' in train['VertrekSpoor'] else ''
-        tekst += "%s:%s - %s naar %s %s\n" % (
+        vertraging = " ({}) ".format(train['VertrekVertragingTekst']) if 'VertrekVertragingTekst' in train else ' '
+        tekst += "%s:%s%s- %s naar %s %s\n" % (
             dateobject.hour,
             minute,
+            vertraging,
             train['TreinSoort'],
             train['EindBestemming'],
             spoor
