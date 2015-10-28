@@ -2,6 +2,7 @@
 # TODO: Error catching
 import xmltodict
 import requests
+from datetime import datetime
 
 api_url = 'http://webservices.ns.nl/ns-api-avt?station=%s'
 
@@ -33,16 +34,22 @@ def zoek(waar):
         return 'Geen resultaten'
 
     data_text = data.text
-    print(data)
     ez_access = xmltodict.parse(data_text)
     if 'error' in ez_access:
         return ez_access['error']['message']
     tekst = ''
+    limit = 10
+    i = 0
     for train in ez_access['ActueleVertrekTijden']['VertrekkendeTrein']:
-        tekst = tekst + "Trein {} van {} naar {} vertrekt om {}\n".format(
-            train['RitNummer'],
-            waar,
+        dateobject = datetime.strptime(train['VertrekTijd'], '%Y-%m-%dT%H:%M:%S%z')
+        tekst += "%s:%s - %s naar %s van spoor %s\n" % (
+            dateobject.hour,
+            dateobject.minute,
+            train['TreinSoort'],
             train['EindBestemming'],
-            train['VertrekTijd']
+            str(train['VertrekSpoor']['#text'])
         )
+        i += 1
+        if i == limit:
+            break
     return tekst
