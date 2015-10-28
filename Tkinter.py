@@ -9,6 +9,7 @@ window.geometry('{}x{}'.format(1920, 1080))
 
 
 def laatschermzien(api):
+    window.deiconify()
     toptext = Label(window, text='Van welk station wilt u actuele vertrektijden zien?')
     toptext.place(x=240, y=150)
     toptext.config(background='#FFE917', foreground='#006', font='Arial 32 bold')
@@ -55,7 +56,7 @@ def laatschermzien(api):
     button10.place(x=1030, y=470)
 
     def quitwindow():
-        window.destroy()
+        window.withdraw()
 
     quit = Button(window, text='Terug naar hoofdmenu', command = quitwindow)
     quit.config(width=16, height=1, background='#003082', foreground='white', font='Arial 14 bold')
